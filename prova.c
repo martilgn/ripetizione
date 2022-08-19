@@ -1,7 +1,10 @@
 #include <stdio.h> 
 
+void fun() {
+    printf("Hello World\n");
+}
+
 int main() {
-    int a = 0;
-    int *pointer = "hello";
-    printf("%d\n", *pointer + a);
+    void (*fun_ptr)() = &fun;
+    fun_ptr();
 }
